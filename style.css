@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size: 65.5%;
+    scroll-behavior: smooth;
+}
+body{
+    letter-spacing: 0.3rem;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+li{
+    padding: 1rem;
+}
+button{
+    background: none;
+    border: none;
+}
+header{
+    width: 100vw;
+    height: 10vh;
+    background: #EDEAD9 ;
+}
+nav{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 2rem;
+}
+nav img{
+    display: none;
+    height: 20%;
+}
+
+.site-intro{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    background: #f9f9f9;
+}
+.intro-left, .intro-right{
+    width: 50%;
+    height: 100%;
+}
+.intro-right{
+    padding: 5rem;
+}
+.intro-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.intro-left__heading--style{
+    font-size: 3rem;
+}
+.intro-left__paragraph--style{
+    padding: 2rem 0;
+    width: 55ch;
+    font-size: 1.8rem;
+}
+.intro-left__btn{
+    padding: 1rem;
+    border: 2px solid #010101;
+    cursor: pointer;
+}
+
+.intro-right__picture{
+    height: 100%;
+    width: 100%;
+    background: url("./img/intro_right_desktop.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 
+    media queries | Device Breakpoints 
+    - allows us to change layout and appearance at different screen sizes
+    - if running into errors check to see if your properties are in the right place
+    - use the inspect tool when viewing your design to easily change between screen sizes
+
+    below are three different media queries for mobile phone | tablet and laptop/desktop
+
+    Have a play around with changing the styles in each brakepoint, experiment and get an
+    understanding on how things are changing.
+
+
+    Task for the weekend 14th - 15/08/2021
+    To create a responsive design different to this one, dont just copy and paste code
+    practice so you get the hang of it after having an understanding refer to the reference
+    channel on teams for more information.
+
+*/
+
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 600px) {
+    header{
+        background: #010101;
+    }
+    nav img{
+        display: block;
+    }
+    ul{
+        display: none;
+    }
+    .intro-left, .intro-right{
+        width: 100%;
+    }
+    .intro-left__paragraph--style{
+        font-size: 1.4rem;
+        width: 45ch;
+    }
+    .intro-right__picture{
+        background: url("./img/intro_right_mobile.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+  /* tablets */
+  @media only screen and (min-width: 600px) and (max-width: 992px) {
+    header{
+        background: #DEAE01;
+    }
+    ul{
+        display: none;
+    }
+    nav img{
+        display: block;
+    }
+    .intro-right__picture{
+        background: url("./img/intro_right_tablet.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .intro-left__paragraph--style{
+        width: 35ch;
+    }
+  }
+
+/* Large devices (laptops/desktop) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    header{
+        background: #010101;
+    }
+    nav{
+        color: #f9f9f9;
+        font-size: 1.5rem;
+    }
+  } 
